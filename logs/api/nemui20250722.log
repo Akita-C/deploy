@@ -1,0 +1,47 @@
+2025-07-22 13:49:15 [INF] Starting Nemui API application
+2025-07-22 13:49:15 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-07-22 13:49:15 [DBG] Registered SignalR Protocol: messagepack, implemented by Microsoft.AspNetCore.SignalR.Protocol.MessagePackHubProtocol.
+2025-07-22 13:49:15 [INF] Nemui API application started successfully
+2025-07-22 13:49:15 [WRN] Storing keys in a directory '/home/appuser/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-07-22 13:49:16 [WRN] No XML encryptor configured. Key {9cf8da6a-b8a5-441a-8cca-f446f1292b62} may be persisted to storage in unencrypted form.
+2025-07-22 13:49:16 [INF] Starting DrawGameEventHostedService
+2025-07-22 13:49:16 [INF] DrawGameEventHostedService started
+2025-07-22 13:49:16 [WRN] Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+2025-07-22 13:49:20 [WRN] Failed to determine the https port for redirect.
+2025-07-22 13:49:20 [INF] HTTP HEAD / responded 404 in 31.2965 ms
+2025-07-22 13:49:25 [INF] HTTP HEAD / responded 404 in 1.6786 ms
+2025-07-22 13:49:30 [INF] HTTP HEAD / responded 404 in 2.7835 ms
+2025-07-22 13:49:35 [INF] HTTP HEAD / responded 404 in 0.2033 ms
+2025-07-22 13:49:40 [INF] HTTP HEAD / responded 404 in 0.2306 ms
+2025-07-22 13:49:45 [INF] HTTP HEAD / responded 404 in 0.2071 ms
+2025-07-22 13:50:15 [INF] HTTP HEAD / responded 404 in 0.2258 ms
+2025-07-22 13:50:16 [DBG] Cleaning up finished rounds
+2025-07-22 13:50:45 [INF] HTTP HEAD / responded 404 in 0.1676 ms
+2025-07-22 13:51:15 [INF] HTTP HEAD / responded 404 in 0.1674 ms
+2025-07-22 13:51:16 [DBG] Cleaning up finished rounds
+2025-07-22 13:51:45 [INF] HTTP HEAD / responded 404 in 0.2011 ms
+2025-07-22 13:52:15 [INF] HTTP HEAD / responded 404 in 0.1839 ms
+2025-07-22 13:52:16 [DBG] Cleaning up finished rounds
+2025-07-22 13:52:45 [INF] HTTP HEAD / responded 404 in 0.2472 ms
+2025-07-22 13:53:15 [INF] HTTP HEAD / responded 404 in 0.2813 ms
+2025-07-22 13:53:16 [DBG] Cleaning up finished rounds
+2025-07-22 13:53:45 [INF] HTTP HEAD / responded 404 in 0.1781 ms
+2025-07-22 13:54:15 [INF] HTTP HEAD / responded 404 in 0.1848 ms
+2025-07-22 13:54:16 [DBG] Cleaning up finished rounds
+2025-07-22 13:54:28 [INF] Stopping DrawGameEventHostedService
+2025-07-22 13:54:28 [INF] DrawGameEventHostedService stopped
+2025-07-22 13:54:28 [DBG] Disposing RoundTimerService...
+2025-07-22 13:54:28 [INF] RoundTimerService disposed successfully
+2025-07-22 13:55:40 [INF] Starting Nemui API application
+2025-07-22 13:55:40 [DBG] Registered SignalR Protocol: json, implemented by Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.
+2025-07-22 13:55:40 [DBG] Registered SignalR Protocol: messagepack, implemented by Microsoft.AspNetCore.SignalR.Protocol.MessagePackHubProtocol.
+2025-07-22 13:55:40 [INF] Nemui API application started successfully
+2025-07-22 13:55:40 [WRN] Storing keys in a directory '/home/appuser/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+2025-07-22 13:55:41 [WRN] No XML encryptor configured. Key {3bb28386-c700-4107-b69b-1011104b7578} may be persisted to storage in unencrypted form.
+2025-07-22 13:55:41 [INF] Starting DrawGameEventHostedService
+2025-07-22 13:55:41 [INF] DrawGameEventHostedService started
+2025-07-22 13:55:41 [WRN] Overriding HTTP_PORTS '8080' and HTTPS_PORTS ''. Binding to values defined by URLS instead 'http://+:8080'.
+2025-07-22 13:56:04 [INF] Stopping DrawGameEventHostedService
+2025-07-22 13:56:04 [INF] DrawGameEventHostedService stopped
+2025-07-22 13:56:04 [DBG] Disposing RoundTimerService...
+2025-07-22 13:56:04 [INF] RoundTimerService disposed successfully
