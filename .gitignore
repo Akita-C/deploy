@@ -1,2 +1,23 @@
-.env.*
-logs
+# Environment files
+.env
+.env.local
+.env.staging
+.env.production
+
+# SSL certificates (sensitive)
+deploy/ssl/
+
+# Logs
+deploy/logs/
+*.log
+
+# Docker volumes
+deploy/data/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/

@@ -7,8 +7,10 @@ services:
     restart: unless-stopped
     environment:
       - ASPNETCORE_ENVIRONMENT=Staging
-      - ASPNETCORE_URLS=http://+:8080
+      - ASPNETCORE_URLS=https://+:8081;http://+:8080
       - ASPNETCORE_FORWARDEDHEADERS_ENABLED=true
+      - ASPNETCORE_Kestrel__Certificates__Default__Path=/etc/ssl/server-certs/fullchain.pem
+      - ASPNETCORE_Kestrel__Certificates__Default__KeyPath=/etc/ssl/server-certs/privkey.pem
       - ConnectionStrings__DefaultConnection=${CLOUD_DATABASE_URL}
       - Redis__EndPoint=${REDIS_ENDPOINT}
       - Redis__Port=${REDIS_PORT}
@@ -33,24 +35,25 @@ services:
       - AdminSettings__EnableSeedEndpoints=${ADMIN_ENABLE_SEED_ENDPOINTS:-false}
     ports:
       - "8080:8080"
+      - "8081:8081"
     networks:
       - nemui-network
     volumes:
       - ./logs/api:/app/logs
+      - ./ssl:/etc/ssl/server-certs:ro
 
   frontend:
     build:
       context: ../sutoresu
       dockerfile: Dockerfile
-      args:
-        - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
-        - NEXT_PUBLIC_FRONTEND_URL=${NEXT_PUBLIC_FRONTEND_URL}
     container_name: nemui-frontend-staging
     restart: unless-stopped
     environment:
       - NODE_ENV=production
       - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
       - NEXT_PUBLIC_FRONTEND_URL=${NEXT_PUBLIC_FRONTEND_URL}
+      - NEXT_PUBLIC_API_TIMEOUT=${NEXT_PUBLIC_API_TIMEOUT:-30000}
+      - NEXT_PUBLIC_API_LOGGING=${NEXT_PUBLIC_API_LOGGING:-false}
     ports:
       - "3000:3000"
     networks:
@@ -72,6 +75,7 @@ services:
       - ./nginx/servers:/etc/nginx/servers:ro
       - ./nginx/routes:/etc/nginx/routes:ro
       - ./logs/nginx:/var/log/nginx
+      - ./ssl:/etc/nginx/ssl:ro
     networks:
       - nemui-network
     depends_on:
